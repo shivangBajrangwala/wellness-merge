@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ROOT CSS START */
+:root {
+    --primary-color: #FF6E00;
+    --secondary-color: ;
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    --dark-color: #272635;
+    --dark-shade-1: #031432;
+    --dark-shade-2: #1B1D21;
+    --dark-shade-3: #0A142F;
+    --light-shade: #F9FBFC;
+    /* --gray-color: ; */
+    --header: 90px;
+    --title-font: 'Poppins';
+    --body-font: 'Poppins';
+}
+
+/* ROOT CSS END */
+/* COMMON CSS START */
+
+*,
+:before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden !important;
+}
+
+body {
+    font-size: 18px;
+    line-height: 32px;
+    background-color: var(--light-shade);
+    color: var(--dark-color);
+    font-family: var(--body-font);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.back-img {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+a {
+    transition: .3s;
+    text-decoration: unset;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.for-des {
+    display: block;
+}
+
+.for-des-flex {
+    display: flex;
+}
+
+.for-mob,
+.for-mob-flex {
+    display: none;
+}
+
+.sec-wp {
+    position: relative;
+    z-index: 4;
+}
+
+/* common css responsive css start */
+@media(max-width: 991px) {
+    .for-mob {
+        display: block;
+    }
+
+    .for-mob-flex {
+        display: flex;
+    }
+
+    .for-des,
+    .for-des-flex {
+        display: none;
+    }
+}
+
+/* common css responsive css end */
+/* COMMON CSS END */
+
+/* TYPOGRAPHY CSS START */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--title-font);
+}
+
+.h1-title {
+    font-size: 50px;
+    line-height: 64px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: .03em;
+}
+
+.h2-title {
+    font-size: 30px;
+    line-height: 47px;
+    font-weight: 500;
+
+}
+
+.h3-title {
+    font-size: 25px;
+    /* line-height: ; */
+    font-weight: 400;
+}
+
+.h4-title {
+    font-size: 22px;
+    /* line-height: ; */
+    font-weight: 400;
+
+}
+
+.h5-title {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 500;
+}
+
+.h6-title {
+    font-size: 16px;
+    /* line-height: ; */
+    font-weight: 600;
+}
+
+.white-text h1,
+.white-text h2,
+.white-text h3,
+.white-text h4,
+.white-text h5,
+.white-text h6,
+.white-text p {
+    color: var(--white-color);
+}
+
+/* TYPOGRAPHY CSS END */
+
+/* HEADER CSS START */
+
+.site-header {
+    position: fixed;
+    width: 100%;
+    inset: 0 0 auto 0;
+    padding: 22px 0;
+    background-color: var(--white-color);
+    z-index: 99;
+    transition: .3s;
+}
+
+.header-mobile-menu ul {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+}
+
+.header-mobile-menu ul li a {
+    position: relative;
+    color: var(--dark-color);
+}
+
+.header-mobile-menu ul li a:before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.header-mobile-menu ul li.active-menu a, .header-mobile-menu ul li a:hover {
+    color: var(--primary-color);
+}
+
+.header-mobile-menu ul li.active-menu a:before, .header-mobile-menu ul li a:hover:before {
+    width: 70%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.header-cta-btn a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 214px;
+    height: 45px;
+    overflow: hidden;
+    border-radius: 45px;
+    outline: 1px solid transparent;
+    color: var(--white-color);
+    font-size: 16px;
+    line-height: 24px;
+    transition: .3s;
+}
+
+.header-cta-btn a:hover {
+    outline-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.header-cta-btn a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(106.67deg, #FFC107 -43.47%, #FF6E00 106.87%);
+    z-index: -1;
+    transition: .3s;
+}
+
+.header-cta-btn a:hover:before {
+    opacity: 0;
+}
+
+nav.site-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 39px;
+}
+
+/* header responsive  css start*/
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1230px;
+    }
+
+}
+
+/* header responsive  css end*/
+/* HEADER CSS END */
+
+/* BANNER CSS START */
+.main-banner {
+    position: relative;
+}
+
+.main-banner .sec-wp {
+    display: flex;
+    align-items: center;
+    min-height: 790px;
+    padding: 150px 0 0 0;
+}
+
+.main-banner:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(117.79deg, rgba(10, 85, 122, 0) -7.95%, rgba(0, 42, 82, 0.8) 52.82%);
+    transform: scale(-1, 1);
+    pointer-events: none;
+}
+
+.sub-title {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 36px;
+    text-transform: uppercase;
+    letter-spacing: .24em;
+    margin-bottom: 4px;
+}
+
+.banner-text p {
+    letter-spacing: .04em;
+}
+
+.banner-content.white-text {
+    max-width: 700px;
+    position: relative;
+}
+
+.banner-text {
+    max-width: 576px;
+}
+
+.banner-cta a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 6px 0 20px;
+    height: 55px;
+    overflow: hidden;
+    border-radius: 45px;
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    font-size: 18px;
+    line-height: 27px;
+    transition: .3s;
+}
+
+.banner-cta a span {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    transition: .3s;
+}
+
+.banner-cta a span:before {
+    content: '';
+    display: inline-flex;
+    width: 17px;
+    height: 14px;
+    background-image: url('../images/arrow_right_line.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: .3s;
+}
+
+.banner-cta {
+    margin-top: 40px;
+}
+
+.banner-cta a:hover {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    gap: 18px;
+}
+
+.banner-cta a:hover span {
+    background-color: var(--white-color);
+}
+
+.banner-cta a:hover span:before {
+    filter: brightness(0);
+}
+
+.banner-content .banner-shape {
+    position: absolute;
+}
+
+.banner-content .banner-shape.dots-shape {
+    top: -102px;
+    left: 96px;
+}
+
+.banner-content .banner-shape.plus-shape {
+    left: 430px;
+    bottom: 0;
+}
+
+.bottom-banner {
+    padding: 43px 0 18px;
+    background: linear-gradient(101.27deg, #062747 31.61%, #041A2F 157.04%);
+}
+
+.bottom-banner-icon span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 58px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: rgb(255 255 255 / 10%);
+}
+
+.bottom-banner-icon span img {
+    position: relative;
+    z-index: 1;
+}
+
+.bottom-banner-box {
+    position: relative;
+    display: flex;
+    gap: 19px;
+}
+
+.bottom-banner-content p {
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: .04em;
+}
+
+.bottom-banner-wp {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.bottom-banner-wp .bottom-banner-box:nth-child(1):after,
+.bottom-banner-wp .bottom-banner-box:nth-child(2):after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -10px;
+    width: 1px;
+    height: 74px;
+    background-color: rgb(255 255 255 / 50%);
+}
+
+.bottom-banner-wp .bottom-banner-box:nth-child(1) {
+    padding: 0 43px 0 22px;
+}
+
+.bottom-banner-wp .bottom-banner-box:nth-child(3) {
+    padding: 0 16px 0 22px;
+}
+
+.bottom-banner-wp .bottom-banner-box:nth-child(2) {
+    padding: 0 22px 0 20px;
+}
+
+.about-us {
+    padding-top: 58px;
+}
+
+.about-us-img {
+    position: relative;
+    max-width: 536px;
+    height: 415px;
+}
+
+.about-us-img .back-img {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.quality-quantity {
+    position: absolute;
+    bottom: -20px;
+    right: -15px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 29px 24px 20px;
+    background-color: var(--white-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px 0px #0000001A;
+}
+
+.quality-quantity span {
+    flex-shrink: 0;
+    width: 40px;
+    aspect-ratio: 1/1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+.quality-quantity p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.quality-quantity>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us-content a {
+    display: inline-flex;
+    font-size: 22px;
+    line-height: 33px;
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+.about-us-content a:hover {
+    color: #002a52;
+}
+
+.about-us-content {
+    margin: 44px 0 0 -24px;
+}
+
+.about-us-content p {
+    max-width: 513px;
+    margin: 14px 0 22px;
+}
+
+.insurance-fee {
+    background-color: var(--white-color);
+    padding: 58px 0 103px;
+}
+
+.insurance-fee .sec-title {
+    text-align: center;
+    max-width: 963px;
+    margin: auto;
+}
+
+.insurance-fee .h3-title {
+    color: var(--primary-color);
+}
+
+.insurance-fee-box-wp {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 68px;
+}
+
+.insurance-fee-box {
+    text-align: center;
+    position: relative;
+}
+
+.insurance-fee-box-wp .insurance-fee-box:not(:last-child):before {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 30px;
+    width: 1px;
+    height: 204px;
+    background-color: #7C7C7C;
+}
+
+.insurance-fee-box .price {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.insurance-fee-box .h4-title {
+    margin-top: 28px;
+}
+
+.insurance-fee-box img {
+    min-height: 84px;
+}
+
+.insurance-fee-text {
+    line-height: 26px;
+    max-width: 330px;
+    margin: auto;
+}
+
+/* banner responsive css start */
+/* banner responsive css end */
+/* BANNER CSS END */
