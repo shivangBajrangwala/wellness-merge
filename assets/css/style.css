@@ -63,13 +63,17 @@ a {
   text-decoration: unset;
 }
 
-ul,
-ol {
+ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+ol {
+  list-style: decimal;
+  padding: 0;
+  margin: 0 0 0 20px;
+}
 
 .for-des {
   display: block;
@@ -90,13 +94,11 @@ ol {
 }
 
 .container {
-
-  padding: 0 calc(var(--gutter) * .5);
+  padding: 0 calc(var(--gutter) * 0.5);
 }
 
 .row {
-
-  margin: 0 calc(var(--gutter) * -.5);
+  margin: 0 calc(var(--gutter) * -0.5);
 }
 
 .fw-500 {
@@ -117,7 +119,7 @@ ol {
   background-color: var(--primary-color);
   color: var(--white-color);
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .sec-btn:hover {
@@ -127,12 +129,10 @@ ol {
 
 /* common css responsive css start */
 @media (min-width: 992px) {
-
   .site-footer .container {
     margin: auto;
     max-width: 1324px;
   }
-
 }
 
 @media (max-width: 991px) {
@@ -302,7 +302,7 @@ h6 {
 
 .header-cta-btn a:hover:before {
   /* opacity: 0; */
-  background: #FFF;
+  background: #fff;
 }
 
 nav.site-navigation {
@@ -437,7 +437,7 @@ nav.site-navigation {
 .banner-content .banner-shape.dots-shape {
   top: -106px;
   left: 96px;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .banner-content .banner-shape.plus-shape {
@@ -737,7 +737,8 @@ nav.site-navigation {
   display: none;
 }
 
-.footer-socials ul li, .footer-socials ul li a {
+.footer-socials ul li,
+.footer-socials ul li a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -749,7 +750,6 @@ nav.site-navigation {
 
 /* FOOTER CSS END  */
 /* HOME PAGE RESPONSIVE CSS START */
-
 
 @media (min-width: 992px) {
   .insurance-fee .sec-title .h3-title {
@@ -775,7 +775,6 @@ nav.site-navigation {
     height: 204px;
     background-color: #7c7c7c;
   }
-
 }
 
 @media (min-width: 1200px) {
@@ -804,7 +803,7 @@ nav.site-navigation {
   }
 }
 
-@media (max-width:1399px) {
+@media (max-width: 1399px) {
   .main-banner .sec-wp {
     min-height: 650px;
   }
@@ -834,10 +833,10 @@ nav.site-navigation {
     padding: 46px 0 32px;
   }
 
-  .information-nav, .product-nav {
+  .information-nav,
+  .product-nav {
     margin-right: 70px;
   }
-
 }
 
 @media (max-width: 1199px) {
@@ -873,13 +872,13 @@ nav.site-navigation {
     font-size: 16px;
   }
 
-  .information-nav, .product-nav {
+  .information-nav,
+  .product-nav {
     margin-right: 34px;
   }
 }
 
 @media (max-width: 991px) {
-
   body {
     font-size: 16px;
     line-height: 1.6;
@@ -890,7 +889,8 @@ nav.site-navigation {
     line-height: 1.5;
   }
 
-  .site-header .container, .site-header .container .row {
+  .site-header .container,
+  .site-header .container .row {
     max-width: 100%;
     margin: 0;
     padding: 0;
@@ -931,7 +931,7 @@ nav.site-navigation {
     width: 100%;
     height: 3px;
     background-color: var(--primary-color);
-    transition: .4s;
+    transition: 0.4s;
   }
 
   nav.site-navigation {
@@ -942,10 +942,12 @@ nav.site-navigation {
     top: 0;
     right: 0;
     transform: translate(100%, 0);
-    background: linear-gradient(117.79deg, rgba(10, 85, 122, 1) -7.95%, rgba(0, 42, 82, 1) 52.82%);
+    background: linear-gradient(117.79deg,
+        rgba(10, 85, 122, 1) -7.95%,
+        rgba(0, 42, 82, 1) 52.82%);
     padding: 11vh 0 0 4vh;
     z-index: 98;
-    transition: .3s;
+    transition: 0.3s;
   }
 
   .toggle-menu nav.site-navigation {
@@ -1002,7 +1004,7 @@ nav.site-navigation {
     width: 100vw;
     height: 100vh;
     background-color: var(--dark-color);
-    opacity: .7;
+    opacity: 0.7;
   }
 
   .banner-content.white-text {
@@ -1018,15 +1020,16 @@ nav.site-navigation {
     line-height: 30px;
   }
 
-
   .main-banner .sec-wp {
     min-height: 575px;
     padding: 120px 0 0 0;
   }
 
   .main-banner:before {
-    background: linear-gradient(120deg, rgba(10, 85, 122, .875) -50%, rgba(0, 42, 82, 1) 50%);
-    opacity: .875;
+    background: linear-gradient(120deg,
+        rgba(10, 85, 122, 0.875) -50%,
+        rgba(0, 42, 82, 1) 50%);
+    opacity: 0.875;
   }
 
   .banner-content .banner-shape.plus-shape {
@@ -1087,7 +1090,7 @@ nav.site-navigation {
 
   .about-us-img {
     max-width: 500px;
-    aspect-ratio: 1/.77425373;
+    aspect-ratio: 1/0.77425373;
     height: auto;
   }
 
@@ -1132,7 +1135,8 @@ nav.site-navigation {
     margin-top: 26px;
   }
 
-  .information-nav, .product-nav {
+  .information-nav,
+  .product-nav {
     margin: 0;
   }
 
@@ -1162,7 +1166,8 @@ nav.site-navigation {
     margin-bottom: 10px;
   }
 
-  .bottom-footer-content p, .footer-policies ul li a {
+  .bottom-footer-content p,
+  .footer-policies ul li a {
     font-size: 14px;
   }
 
@@ -1260,7 +1265,6 @@ nav.site-navigation {
   .top-footer {
     padding: 48px 0 36px;
   }
-
 }
 
 @media (max-width: 480px) {
@@ -1310,7 +1314,6 @@ nav.site-navigation {
   .footer-navs {
     flex-direction: column;
   }
-
 }
 
 @media (max-width: 400px) {
@@ -1335,7 +1338,6 @@ nav.site-navigation {
   .banner-content .banner-shape.plus-shape {
     left: 260px;
   }
-
 }
 
 /* HOME PAGE RESPONSIVE CSS END */
@@ -1415,7 +1417,6 @@ nav.site-navigation {
   border-bottom: 1px solid rgb(124 124 124 / 20%);
 }
 
-
 .physical-therapy .insurance-fee-box-wp .insurance-fee-box:before {
   top: 16px;
 }
@@ -1440,7 +1441,7 @@ nav.site-navigation {
 }
 
 /* how it works responsive start */
-@media(min-width: 1200px) {
+@media (min-width: 1200px) {
   .insurance-fee-box-wp .insurance-fee-box {
     padding: 0 48px;
   }
@@ -1456,7 +1457,7 @@ nav.site-navigation {
   }
 }
 
-@media(max-width: 1199px) {
+@media (max-width: 1199px) {
   .inner-banner .banner-content {
     padding: 0;
   }
@@ -1466,7 +1467,7 @@ nav.site-navigation {
   }
 }
 
-@media(max-width: 991px) {
+@media (max-width: 991px) {
   .inner-banner {
     padding: 130px 0 40px;
   }
@@ -1489,7 +1490,7 @@ nav.site-navigation {
   }
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .comparison-box table thead th {
     font-size: 18px;
   }
@@ -1509,7 +1510,7 @@ nav.site-navigation {
   }
 }
 
-@media(max-width: 575px) {
+@media (max-width: 575px) {
   .inner-banner {
     padding: 110px 0 20px;
   }
@@ -1577,14 +1578,14 @@ nav.site-navigation {
 }
 
 .rehabilitation-points ul li:before {
-  content: '';
+  content: "";
   position: relative;
   top: 7px;
   display: inline-block;
   align-self: flex-start;
   width: 18px;
   aspect-ratio: 1/1;
-  -webkit-mask-image: url('../images/rehabilitation-point-icon.svg');
+  -webkit-mask-image: url("../images/rehabilitation-point-icon.svg");
   -webkit-mask-size: cover;
   -webkit-mask-position: center;
   background: var(--primary-color);
@@ -1592,7 +1593,7 @@ nav.site-navigation {
 
 .rehabilitation-section-wp .rehabilitation-section:nth-child(odd) {
   background-color: var(--white-color);
-  box-shadow: 0px 8px 10px 0px #F2FFFE;
+  box-shadow: 0px 8px 10px 0px #f2fffe;
 }
 
 .rehabilitation-section-wp .rehabilitation-section {
@@ -1606,7 +1607,7 @@ nav.site-navigation {
 }
 
 .rehabilitation-section .h2-title:before {
-  content: '';
+  content: "";
   position: absolute;
   width: 110px;
   height: 2px;
@@ -1645,7 +1646,7 @@ nav.site-navigation {
 
 .what-expect {
   background-color: var(--white-color);
-  box-shadow: 0px 8px 10px 0px #F2FFFE;
+  box-shadow: 0px 8px 10px 0px #f2fffe;
   padding: 57px 0 68px;
 }
 
@@ -1656,7 +1657,7 @@ nav.site-navigation {
 }
 
 /* what we treat responsive start */
-@media(max-width: 1199px) {
+@media (max-width: 1199px) {
   .pain-management-box {
     padding-left: 24px;
     gap: 12px;
@@ -1734,7 +1735,6 @@ nav.site-navigation {
     gap: 10px;
   }
 
-
   .rehabilitation-points ul li:before {
     width: 14px;
   }
@@ -1756,11 +1756,9 @@ nav.site-navigation {
     max-width: 286px;
     margin: 40px 0 0 0;
   }
-
 }
 
 @media (max-width: 480px) {
-
   .what-expect {
     padding: 40px 0 50px;
   }
@@ -1799,9 +1797,7 @@ nav.site-navigation {
     width: 166px;
     height: 46px;
   }
-
 }
-
 
 /* what we treat responsive end */
 /* WHAT WE TREAT CSS START */
@@ -1809,7 +1805,6 @@ nav.site-navigation {
 .about_page .inner-banner {
   padding: 244px 0 146px;
 }
-
 
 .about-main-content .sec-btn {
   width: 203px;
@@ -1840,7 +1835,7 @@ nav.site-navigation {
 }
 
 .about-main-img-box:before {
-  content: '';
+  content: "";
   position: absolute;
   width: 474px;
   top: 20px;
@@ -1848,7 +1843,7 @@ nav.site-navigation {
   aspect-ratio: 1/1;
   overflow: hidden;
   border-radius: 10px 10px 0 0;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   z-index: -1;
   pointer-events: none;
 }
@@ -1871,7 +1866,7 @@ nav.site-navigation {
 }
 
 .features-image .back-img:before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -1879,7 +1874,7 @@ nav.site-navigation {
   height: 363px;
   overflow: hidden;
   border-radius: 10px 10px 0 0;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   z-index: -1;
 }
 
@@ -1889,7 +1884,6 @@ nav.site-navigation {
   overflow: hidden;
   border-radius: 10px;
 }
-
 
 .features-content {
   max-width: 664px;
@@ -1916,9 +1910,8 @@ nav.site-navigation {
   padding: 138px 0 73px;
 }
 
-
 /* about us responsive css start */
-@media(min-width: 992px) {
+@media (min-width: 992px) {
   .about-main-content h2.h2-title {
     font-size: 45px;
     margin-bottom: 14px;
@@ -1932,12 +1925,9 @@ nav.site-navigation {
   .features-content .h3-title {
     font-size: 24px;
   }
-
-
 }
 
 @media (min-width: 1200px) {
-
   .inhome-physical-therapy .insurance-fee-box {
     padding: 0 24px;
   }
@@ -1953,7 +1943,7 @@ nav.site-navigation {
   }
 }
 
-@media(max-width: 1199px) {
+@media (max-width: 1199px) {
   .about-main-img-box:before {
     width: 372px;
     right: 24px;
@@ -1992,7 +1982,6 @@ nav.site-navigation {
     margin-top: 40px;
   }
 
-
   .about-main-content h3.h2-title {
     font-size: 20px;
     line-height: 1.2;
@@ -2027,7 +2016,7 @@ nav.site-navigation {
   .about-main-img {
     width: 75%;
     height: auto;
-    aspect-ratio: 1/.65;
+    aspect-ratio: 1/0.65;
   }
 
   .about-main-img-box:before {
@@ -2042,7 +2031,6 @@ nav.site-navigation {
   .about-main-content h3.h2-title {
     font-size: 18px;
   }
-
 
   .about-main-content .sec-btn {
     width: 162px;
@@ -2080,24 +2068,28 @@ nav.site-navigation {
   .inhome-physical-therapy {
     padding: 42px 0;
   }
-
 }
-
 
 /* about us responsive css end */
 /* ABOUT US CSS START */
 
 /* CONTACT US PAGE CSS START */
+.contact_page .inner-banner {
+  padding: 202px 0 246px;
+}
+
 .request-appointment-box {
+  position: relative;
   max-width: 996px;
-  margin: auto;
+  margin: -185px auto 0;
   background-color: var(--white-color);
   overflow: hidden;
   border-radius: 10px;
   display: grid;
   grid-template-columns: 422px auto;
   gap: 28px 87px;
-  padding: 40px 100px 52px 100px;
+  padding: 32px 100px 58px 100px;
+  z-index: 1;
 }
 
 .request-appointment-form .form-box {
@@ -2106,17 +2098,18 @@ nav.site-navigation {
   margin-bottom: 38px;
 }
 
-.request-appointment-form .form-box input:not(input[type="radio"]), .request-appointment-form .form-box select {
+.request-appointment-form .form-box input:not(input[type="radio"]),
+.request-appointment-form .form-box select {
   width: 100%;
   outline: none;
   padding: 10px 14px 0;
-  border: 1px solid #B4BEC8;
+  border: 1px solid #b4bec8;
   border-radius: 4px;
   height: 59px;
   font-size: 16px;
   appearance: none;
   -webkit-appearance: none;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .request-appointment-form .form-box:not(.form_select):not(.radio-box-wp):not(.submit-btn) label {
@@ -2129,7 +2122,7 @@ nav.site-navigation {
   padding: 0 10px;
   font-size: 18px;
   line-height: 1;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .request-appointment-form .form-box input::placeholder {
@@ -2160,7 +2153,7 @@ nav.site-navigation {
 }
 
 .form_select_wp:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   right: 14px;
@@ -2214,7 +2207,7 @@ nav.site-navigation {
 }
 
 .form-box.radio-box-wp .radio-box-option label:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 0;
@@ -2226,7 +2219,7 @@ nav.site-navigation {
   background-color: transparent;
   border: 3px solid var(--white-color);
   outline: 2px solid var(--black-color);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .form-box.radio-box-wp .radio-box-option input:checked~label:before {
@@ -2237,6 +2230,10 @@ nav.site-navigation {
   max-width: 100%;
   width: 100%;
   height: 50px;
+}
+
+.form-box.submit-btn {
+  margin: 0 !important;
 }
 
 .request-appointment-box .h2-title {
@@ -2253,9 +2250,22 @@ nav.site-navigation {
   color: inherit;
 }
 
-.wellness-brand p a,
-.wellness-phone a:hover,
-.wellness-mail a:hover {
+.wellness-socials ul {
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.wellness-socials ul a {
+  color: var(--primary-color);
+}
+
+.wellness-socials ul a:hover {
+  color: var(--dark-color);
+  opacity: .875;
+}
+
+.wellness-brand p a:hover, .wellness-phone a:hover, .wellness-mail a:hover {
   color: var(--primary-color);
 }
 
@@ -2263,4 +2273,311 @@ nav.site-navigation {
   margin-bottom: 14px;
 }
 
+.request-content {
+  padding: 90px 0 30px;
+}
+
+.request-content .row {
+  max-width: 1016px;
+  margin: auto;
+}
+
+.request-content .h4-title {
+  color: var(--black-color);
+  margin-bottom: 14px;
+}
+
+.request-content p:not(:last-of-type) {
+  margin-bottom: 50px;
+}
+
+.request-content p {
+  color: var(--dark-color);
+}
+
+.blog-image {
+  width: 100%;
+  aspect-ratio: 1/.43076923;
+  overflow: hidden;
+}
+
+.blog-image:hover a {
+  transform: scale(1.0125);
+}
+
+.blog-image a {
+  display: block;
+  transform: scale(1);
+}
+
+.blog-card .h6-title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: var(--black-color);
+  margin-bottom: 14px;
+}
+
+.blog-card-content .h6-title a:hover {
+  text-decoration: underline !important;
+}
+
+.blog-text p {
+  color: #1E1E1E;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.blog-card-content {
+  padding: 14px 20px 33px;
+}
+
+.blog-card-content .h6-title a {
+  color: inherit;
+}
+
+.blog-author {
+  margin-top: 14px;
+  padding-top: 24px;
+  border-top: 1px solid #D4D4D4;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.blog-detail-sec .blog-author {
+  margin: 0 0 23px 0;
+  padding: 0 0 28px 0;
+  border: 0;
+  border-bottom: 1px solid #D4D4D4;
+}
+
+.blog-author-avatar {
+  display: block;
+  flex: 0 0 auto;
+  width: 38px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+.blog-author-details {
+  display: flex;
+  align-items: center;
+}
+
+.blog-author-details li {
+  position: relative;
+  padding-right: 18px;
+  margin-right: 18px;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #6D7D8B;
+}
+
+.blog-author-details li a:hover {
+  color: var(--primary-color);
+  text-decoration: underline !important;
+}
+
+.blog-author-details li:not(:last-child):before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 2px;
+  height: 10px;
+  background-color: #BBC8D4;
+}
+
+.blog-author-details li * {
+  color: inherit;
+}
+
 /* CONTACT US PAGE CSS START */
+@media (max-width: 991px) {
+  .request-appointment-box {
+    padding: 42px 40px;
+    grid-template-columns: auto;
+    margin: -120px auto 0;
+  }
+
+  .contact-options {
+    text-align: center;
+  }
+
+  .contact_page .inner-banner {
+    padding: 162px 0 206px;
+  }
+
+  .request-content {
+    padding: 60px 0 30px;
+  }
+
+  .request-content p:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .request-appointment-box {
+    padding: 30px;
+    margin: -80px auto 0;
+  }
+
+  .request-appointment-form .form-box:not(.form_select):not(.radio-box-wp):not(.submit-btn) label {
+    font-size: 14px;
+    left: 12px;
+    padding: 0 8px;
+  }
+
+  .request-appointment-form .form-box input:not(input[type="radio"]), .request-appointment-form .form-box select {
+    height: 54px;
+    padding-top: 4px;
+  }
+
+  .contact_page .inner-banner {
+    padding: 146px 0;
+  }
+
+  .request-content {
+    padding: 50px 0 20px;
+  }
+}
+
+@media(max-width: 480px) {
+  .request-appointment-box {
+    padding: 20px;
+  }
+
+  .radio-box {
+    flex-direction: column;
+    gap: 11px;
+    align-items: flex-start;
+  }
+
+  .form-box.radio-box-wp {
+    gap: 16px;
+  }
+
+  .request-appointment-form .form-box {
+    margin-bottom: 24px;
+  }
+
+  .request-appointment-form .form-box input:not(input[type="radio"]), .request-appointment-form .form-box select {
+    height: 46px;
+    padding-top: 4px;
+    font-size: 14px;
+  }
+
+  .request-appointment-form .form-box:not(.form_select):not(.radio-box-wp):not(.submit-btn) label {
+    top: -7px;
+  }
+
+  .form-box.radio-box-wp>label {
+    flex: 0 0 168px;
+  }
+
+  .submit-btn button.sec-btn {
+    height: 46px;
+  }
+}
+
+/* BLOG PAGE CSS START */
+.blog-content,
+.blog-detail-sec {
+  padding: 138px 0 126px;
+}
+
+.blog-listing {
+  margin-top: 34px;
+}
+
+.blog-card {
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: var(--white-color);
+}
+
+.blog-listing .row {
+  gap: 34px 0;
+}
+
+a.blog-nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  height: 50px;
+  background-color: #EFEFEF;
+  color: var(--dark-color);
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.blog-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+a.blog-nav-next {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.blog-nav a.blog-nav-link:hover {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+.blog-detail-sec .container {
+  max-width: 1011px;
+}
+
+.blog-detail-image {
+  width: 100%;
+  aspect-ratio: 1/.48032290;
+  margin-bottom: 38px;
+}
+
+.blog-detail-content ol li span {
+  display: block;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-left: -14px;
+}
+
+.blog-detail-content ol li:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.blog-detail-content ol li {
+  font-size: 22px;
+}
+
+.blog-detail-content ol {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+a.read-blog {
+  font-weight: 500;
+  font-size: 22px;
+  text-decoration: underline;
+  color: var(--primary-color);
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.blog_details_page .blog-detail-sec {
+  padding-bottom: 36px;
+}
+
+/* BLOG PAGE CSS END */
