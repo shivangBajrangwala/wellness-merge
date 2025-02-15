@@ -11,7 +11,6 @@
   --dark-shade-2: #1b1d21;
   --dark-shade-3: #0a142f;
   --light-shade: #f9fbfc;
-  /* --gray-color: ; */
   --header: 90px;
   --title-font: "Poppins";
   --body-font: "Poppins";
@@ -40,6 +39,10 @@ body {
   background-color: var(--light-shade);
   color: var(--dark-color);
   font-family: var(--body-font);
+}
+
+p:last-child {
+  margin: 0;
 }
 
 img {
@@ -100,8 +103,30 @@ ol {
   font-weight: 500 !important;
 }
 
+.dark-color {
+  color: var(--dark-color) !important;
+}
+
+.sec-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border: 0;
+  outline: none;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  cursor: pointer;
+  transition: .3s;
+}
+
+.sec-btn:hover {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+
 /* common css responsive css start */
-@media (min-width: 992) {
+@media (min-width: 992px) {
 
   .site-footer .container {
     margin: auto;
@@ -142,8 +167,8 @@ h6 {
   font-size: 40px;
   line-height: 54px;
   font-weight: 600;
-  margin-bottom: 20px;
-  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -585,7 +610,7 @@ nav.site-navigation {
 
 /*FOOTER CSS START*/
 .top-footer {
-  padding: 52px 0 12px;
+  padding: 52px 0 28px;
 }
 
 .footer-navs {
@@ -757,6 +782,7 @@ nav.site-navigation {
   .main-banner .h1-title {
     font-size: 50px;
     line-height: 64px;
+    margin-bottom: 20px;
   }
 }
 
@@ -1228,7 +1254,6 @@ nav.site-navigation {
   }
 
   .footer-navs {
-    flex-direction: column;
     gap: 30px;
   }
 
@@ -1281,11 +1306,16 @@ nav.site-navigation {
   .bottom-banner {
     padding: 40px 0;
   }
+
+  .footer-navs {
+    flex-direction: column;
+  }
+
 }
 
 @media (max-width: 400px) {
   .h1-title {
-    font-size: 9vw;
+    font-size: 8vw;
   }
 
   .sub-title {
@@ -1305,6 +1335,7 @@ nav.site-navigation {
   .banner-content .banner-shape.plus-shape {
     left: 260px;
   }
+
 }
 
 /* HOME PAGE RESPONSIVE CSS END */
@@ -1312,7 +1343,7 @@ nav.site-navigation {
 .inner-banner .banner-content {
   text-align: center;
   max-width: 100%;
-  padding: 0 200px;
+  padding: 0 196px;
 }
 
 .inner-banner:before {
@@ -1336,14 +1367,17 @@ nav.site-navigation {
 
 .how_it_works_page .insurance-fee {
   background-color: var(--light-shade);
+  padding-bottom: 50px;
 }
 
 .other-clinic {
   background-color: var(--white-color);
+  padding: 60px 0 64px;
 }
 
 .other-clinic .sec-title {
   text-align: center;
+  margin-bottom: 24px;
 }
 
 .comparison-box table {
@@ -1366,10 +1400,867 @@ nav.site-navigation {
 .comparison-box table tbody td {
   line-height: 22px;
   color: var(--black-color);
+  padding: 28px 0;
 }
 
-.comparison-box table tbody tr {
+.comparison-box table tbody tr:first-child td {
+  padding-top: 40px;
+}
+
+.comparison-box tbody tr:nth-child(even) td {
+  color: var(--primary-color);
+}
+
+.comparison-box table tbody tr:not(:last-child) {
   border-bottom: 1px solid rgb(124 124 124 / 20%);
 }
 
+
+.physical-therapy .insurance-fee-box-wp .insurance-fee-box:before {
+  top: 16px;
+}
+
+.comparison-cta a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 314px;
+  height: 60px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.comparison-cta a:hover {
+  background-color: var(--dark-color);
+}
+
+.comparison-cta {
+  margin-top: 14px;
+}
+
+/* how it works responsive start */
+@media(min-width: 1200px) {
+  .insurance-fee-box-wp .insurance-fee-box {
+    padding: 0 48px;
+  }
+}
+
+@media (max-width: 1399px) {
+  .inner-banner .banner-content {
+    padding: 0 142px;
+  }
+
+  .inner-banner {
+    padding: 200px 0 100px;
+  }
+}
+
+@media(max-width: 1199px) {
+  .inner-banner .banner-content {
+    padding: 0;
+  }
+
+  .comparison-box table {
+    width: 100%;
+  }
+}
+
+@media(max-width: 991px) {
+  .inner-banner {
+    padding: 130px 0 40px;
+  }
+
+  .comparison-box table thead th {
+    font-size: 22px;
+  }
+
+  .comparison-box table tbody td {
+    padding: 18px 0;
+  }
+
+  .comparison-box table tbody tr:first-child td {
+    padding-top: 26px;
+  }
+
+  .comparison-cta a {
+    min-width: 244px;
+    height: 52px;
+  }
+}
+
+@media(max-width: 767px) {
+  .comparison-box table thead th {
+    font-size: 18px;
+  }
+
+  .comparison-box table tbody td {
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 12px 0;
+  }
+
+  .comparison-box table tbody tr:first-child td {
+    padding-top: 20px;
+  }
+
+  .other-clinic {
+    padding: 46px 0;
+  }
+}
+
+@media(max-width: 575px) {
+  .inner-banner {
+    padding: 110px 0 20px;
+  }
+
+  .comparison-box table thead th {
+    font-size: 16px;
+  }
+
+  .comparison-cta a {
+    min-width: 214px;
+    height: 46px;
+  }
+
+  .comparison-cta {
+    margin-top: 6px;
+  }
+}
+
+/* how it works responsive end */
+
 /*HOW IT WORKS CSS END*/
+
+/* WHAT WE TREAT CSS START */
+.pain-management {
+  padding: 46px 0 80px;
+}
+
+.pain-management .sec-title {
+  max-width: 823px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.pain-management-box {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--white-color);
+  border-radius: 75px;
+  padding-left: 40px;
+  gap: 30px;
+}
+
+.types-of-pain .row {
+  gap: 35px 0;
+}
+
+.pain-management-box p {
+  margin: 0;
+}
+
+.rehabilitation-points ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px 20px;
+}
+
+.rehabilitation-points ul li {
+  break-inside: avoid;
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.rehabilitation-points ul li:before {
+  content: '';
+  position: relative;
+  top: 7px;
+  display: inline-block;
+  align-self: flex-start;
+  width: 18px;
+  aspect-ratio: 1/1;
+  -webkit-mask-image: url('../images/rehabilitation-point-icon.svg');
+  -webkit-mask-size: cover;
+  -webkit-mask-position: center;
+  background: var(--primary-color);
+}
+
+.rehabilitation-section-wp .rehabilitation-section:nth-child(odd) {
+  background-color: var(--white-color);
+  box-shadow: 0px 8px 10px 0px #F2FFFE;
+}
+
+.rehabilitation-section-wp .rehabilitation-section {
+  padding: 76px 0 64px;
+}
+
+.rehabilitation-section .h2-title {
+  text-align: center;
+  padding-bottom: 8px;
+  margin-bottom: 34px;
+}
+
+.rehabilitation-section .h2-title:before {
+  content: '';
+  position: absolute;
+  width: 110px;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: var(--primary-color);
+}
+
+.clinical-approach .h2-title {
+  max-width: 271px;
+  margin: 0 14px 0 auto;
+}
+
+.clinical-approach-content ul {
+  list-style: disc;
+  margin: 32px 0 0 28px;
+}
+
+.clinical-approach-content ul li::marker {
+  font-size: 14px;
+}
+
+.clinical-approach {
+  padding: 70px 0;
+}
+
+.what-expect-img {
+  text-align: right;
+  margin-right: 80px;
+}
+
+.what-expect-content {
+  max-width: 583px;
+}
+
+.what-expect {
+  background-color: var(--white-color);
+  box-shadow: 0px 8px 10px 0px #F2FFFE;
+  padding: 57px 0 68px;
+}
+
+.what-expect-content .sec-btn {
+  width: 197px;
+  height: 51px;
+  margin-top: 6px;
+}
+
+/* what we treat responsive start */
+@media(max-width: 1199px) {
+  .pain-management-box {
+    padding-left: 24px;
+    gap: 12px;
+  }
+
+  .pain-management-box p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .types-of-pain .row {
+    gap: var(--gutter) 0;
+  }
+
+  .pain-management .sec-title {
+    margin: 0 auto 20px;
+  }
+
+  .pain-management {
+    padding: 46px 0;
+  }
+
+  .rehabilitation-section-wp .rehabilitation-section {
+    padding: 44px 0;
+  }
+
+  .rehabilitation-points ul {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 70px;
+  }
+
+  .clinical-approach .h2-title {
+    margin: 0 0 8px 0;
+  }
+
+  .clinical-approach-content ul {
+    margin: 20px 0 0 28px;
+  }
+
+  .clinical-approach {
+    padding: 50px 0;
+  }
+
+  .what-expect-img {
+    text-align: left;
+    margin: 60px 0 0 0;
+    max-width: 324px;
+  }
+}
+
+@media (max-width: 767px) {
+  .types-of-pain .row {
+    gap: 12px 0;
+  }
+
+  .pain-management .sec-title {
+    margin: 0 auto 20px;
+  }
+
+  .pain-management-box img {
+    max-width: 80%;
+    max-height: 34px;
+  }
+
+  .pain-management-box {
+    height: 60px;
+    gap: 10px;
+    padding-left: 18px;
+  }
+
+  .rehabilitation-points ul {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 40px;
+    gap: 10px;
+  }
+
+
+  .rehabilitation-points ul li:before {
+    width: 14px;
+  }
+
+  .rehabilitation-points ul li {
+    gap: 8px;
+  }
+
+  .clinical-approach-content ul li {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .clinical-approach-content ul li:not(:last-child) {
+    margin-bottom: 6px;
+  }
+
+  .what-expect-img {
+    max-width: 286px;
+    margin: 40px 0 0 0;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .what-expect {
+    padding: 40px 0 50px;
+  }
+
+  .rehabilitation-section .h2-title {
+    margin-bottom: 24px;
+  }
+
+  .rehabilitation-section-wp .rehabilitation-section {
+    padding: 34px 0;
+  }
+
+  .clinical-approach {
+    padding: 34px 0;
+  }
+
+  .what-expect {
+    padding: 32px 0 44px;
+  }
+
+  .pain-management .sec-title {
+    margin: 0 auto 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .rehabilitation-points ul {
+    margin-left: 16px;
+  }
+
+  .types-of-pain .row {
+    gap: 8px 0;
+  }
+
+  .what-expect-content .sec-btn {
+    width: 166px;
+    height: 46px;
+  }
+
+}
+
+
+/* what we treat responsive end */
+/* WHAT WE TREAT CSS START */
+/* ABOUT US CSS START */
+.about_page .inner-banner {
+  padding: 244px 0 146px;
+}
+
+
+.about-main-content .sec-btn {
+  width: 203px;
+  height: 50px;
+}
+
+.about-main-cta {
+  margin-top: 30px;
+}
+
+.features-content .h3-title {
+  color: var(--primary-color);
+}
+
+.about-main-img {
+  width: 376px;
+  height: 246px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.about-main-img-box {
+  position: relative;
+  margin-left: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-main-img-box:before {
+  content: '';
+  position: absolute;
+  width: 474px;
+  top: 20px;
+  right: 40px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  background-color: #F2F2F2;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.about-main-img:first-child {
+  margin-left: auto;
+}
+
+.about-main-content {
+  max-width: 572px;
+}
+
+.about-us-main {
+  padding: 84px 0 0;
+}
+
+.features-image {
+  position: relative;
+  padding: 22px 0 0 30px;
+}
+
+.features-image .back-img:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 315px;
+  height: 363px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  background-color: #F2F2F2;
+  z-index: -1;
+}
+
+.features-image .back-img {
+  max-width: 424px;
+  aspect-ratio: 1/1.02830188;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+
+.features-content {
+  max-width: 664px;
+}
+
+.features-text p {
+  line-height: 26px;
+}
+
+.features-text p:not(:last-child) {
+  margin-bottom: 26px;
+}
+
+.features-content .h2-title {
+  max-width: 540px;
+}
+
+.features {
+  margin-top: 76px;
+}
+
+.inhome-physical-therapy {
+  background-color: unset;
+  padding: 138px 0 73px;
+}
+
+
+/* about us responsive css start */
+@media(min-width: 992px) {
+  .about-main-content h2.h2-title {
+    font-size: 45px;
+    margin-bottom: 14px;
+  }
+
+  .about-main-content h3.h2-title {
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+
+  .features-content .h3-title {
+    font-size: 24px;
+  }
+
+
+}
+
+@media (min-width: 1200px) {
+
+  .inhome-physical-therapy .insurance-fee-box {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 1399px) {
+  .about-main-img-box:before {
+    width: 444px;
+  }
+
+  .features-content {
+    margin-left: 30px;
+  }
+}
+
+@media(max-width: 1199px) {
+  .about-main-img-box:before {
+    width: 372px;
+    right: 24px;
+  }
+
+  .about-main-img-box:before {
+    width: 362px;
+    right: 32px;
+  }
+}
+
+@media (max-width: 991px) {
+  .features {
+    margin-bottom: 50px;
+  }
+
+  .about_page .inner-banner {
+    padding: 174px 0 76px;
+  }
+
+  .about-us-main {
+    padding: 52px 0 0;
+  }
+
+  .about-main-img-box {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .about-main-img-box:before {
+    width: 442px;
+  }
+
+  .about-main-content {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+
+  .about-main-content h3.h2-title {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+
+  .features-content {
+    margin: 40px 0 0 0;
+  }
+
+  .features-text p:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .inhome-physical-therapy {
+    padding: 52px 0;
+    background-color: var(--white-color);
+  }
+
+  .features-image .back-img:before {
+    width: 58%;
+    height: auto;
+    aspect-ratio: 1/1.125;
+  }
+
+  .features-image {
+    padding: 18px 0 0 26px;
+  }
+}
+
+@media (max-width: 575px) {
+  .about-main-img {
+    width: 75%;
+    height: auto;
+    aspect-ratio: 1/.65;
+  }
+
+  .about-main-img-box:before {
+    width: 90%;
+    right: 16px;
+  }
+
+  .about-main-img-box {
+    max-width: calc(100% - 30px);
+  }
+
+  .about-main-content h3.h2-title {
+    font-size: 18px;
+  }
+
+
+  .about-main-content .sec-btn {
+    width: 162px;
+    height: 46px;
+  }
+
+  .about_page .inner-banner {
+    padding: 144px 0 52px;
+  }
+
+  .features-image .back-img {
+    max-width: 340px;
+  }
+
+  .about-us-main {
+    padding: 40px 0 0;
+  }
+
+  .about-main-content {
+    margin-top: 26px;
+  }
+
+  .about-main-content h3.h2-title {
+    margin-bottom: 12px;
+  }
+
+  .about-main-cta {
+    margin-top: 20px;
+  }
+
+  .features {
+    margin: 50px 0 34px;
+  }
+
+  .inhome-physical-therapy {
+    padding: 42px 0;
+  }
+
+}
+
+
+/* about us responsive css end */
+/* ABOUT US CSS START */
+
+/* CONTACT US PAGE CSS START */
+.request-appointment-box {
+  max-width: 996px;
+  margin: auto;
+  background-color: var(--white-color);
+  overflow: hidden;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 422px auto;
+  gap: 28px 87px;
+  padding: 40px 100px 52px 100px;
+}
+
+.request-appointment-form .form-box {
+  position: relative;
+  display: block;
+  margin-bottom: 38px;
+}
+
+.request-appointment-form .form-box input:not(input[type="radio"]), .request-appointment-form .form-box select {
+  width: 100%;
+  outline: none;
+  padding: 10px 14px 0;
+  border: 1px solid #B4BEC8;
+  border-radius: 4px;
+  height: 59px;
+  font-size: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: .3s;
+}
+
+.request-appointment-form .form-box:not(.form_select):not(.radio-box-wp):not(.submit-btn) label {
+  position: absolute;
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  top: -9px;
+  left: 20px;
+  z-index: 5;
+  padding: 0 10px;
+  font-size: 18px;
+  line-height: 1;
+  transition: .3s;
+}
+
+.request-appointment-form .form-box input::placeholder {
+  color: var(--dark-color);
+}
+
+.request-appointment-form .form-box input:focus {
+  border: 1px solid #9ea7b1;
+  box-shadow: 0 0 12px rgb(158 167 177 / 6%);
+  padding-top: 5px;
+}
+
+.form-box label {
+  position: relative;
+  display: block;
+}
+
+.request-appointment-form .form-box select {
+  width: 100%;
+  height: 59px;
+
+  padding-top: 0;
+  font-size: 18px;
+}
+
+.form_select_wp {
+  position: relative;
+}
+
+.form_select_wp:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translate(0, -50%) rotate(90deg);
+  display: inline-block;
+  align-self: flex-start;
+  width: 16px;
+  aspect-ratio: 1 / 1;
+  -webkit-mask-image: url(../images/rehabilitation-point-icon.svg);
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  background: var(--primary-color);
+}
+
+.form-box.radio-box-wp {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.form-box.radio-box-wp>label {
+  flex: 0 0 186px;
+}
+
+.radio-box {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.form-box.radio-box-wp .radio-box-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-box.radio-box-wp .radio-box-option input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.form-box.radio-box-wp .radio-box-option label {
+  padding-left: 28px;
+}
+
+.form-box.radio-box-wp .radio-box-option label:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: 18px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 3px solid var(--white-color);
+  outline: 2px solid var(--black-color);
+  transition: .3s;
+}
+
+.form-box.radio-box-wp .radio-box-option input:checked~label:before {
+  background-color: var(--primary-color);
+}
+
+.submit-btn button.sec-btn {
+  max-width: 100%;
+  width: 100%;
+  height: 50px;
+}
+
+.request-appointment-box .h2-title {
+  grid-column: 1/-1;
+}
+
+.wellness-brand p a {
+  display: block;
+  color: inherit;
+}
+
+.wellness-phone a,
+.wellness-mail a {
+  color: inherit;
+}
+
+.wellness-brand p a,
+.wellness-phone a:hover,
+.wellness-mail a:hover {
+  color: var(--primary-color);
+}
+
+.wellness-brand {
+  margin-bottom: 14px;
+}
+
+/* CONTACT US PAGE CSS START */
